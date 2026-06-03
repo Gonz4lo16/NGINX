@@ -1,10 +1,12 @@
-name: Saludo
+name: Saludo con Variable
 
 on:
   push:
     branches:
       - main
       - develop
+env:
+  MI_NOMBRE: "Gonzalo Pereda"
 
 jobs:
   saludo:
@@ -12,8 +14,8 @@ jobs:
     steps:
       - name: Saludo desde main
         if: github.ref == 'refs/heads/main'
-        run: echo "Hola desde main, soy Walter Leturia"
+        run: echo "Hola desde main, soy $MI_NOMBRE"
 
       - name: Saludo desde develop
         if: github.ref == 'refs/heads/develop'
-        run: echo "Hola desde develop, soy Walter Leturia"
+        run: echo "Hola desde develop, soy $MI_NOMBRE"
