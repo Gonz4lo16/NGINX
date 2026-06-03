@@ -6,7 +6,6 @@ on:
       - main
       - develop
 
-# Aquí definimos tu nombre como variable global
 env:
   MI_NOMBRE: "Gonzalo Pereda"
 
